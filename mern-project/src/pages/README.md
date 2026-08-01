@@ -1,0 +1,1 @@
+This folder will contain the main pages for the web page like homepage and about page

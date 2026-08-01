@@ -1,0 +1,1 @@
+This folder will contain images and media which will be used in web page.

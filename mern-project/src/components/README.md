@@ -1,0 +1,1 @@
+This folder will contain reusable components like navbars and footers
