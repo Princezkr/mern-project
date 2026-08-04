@@ -1,9 +1,14 @@
 import "../styles/Gallery.css";
+import galleryOne from "../assets/Gallery1.jpg";
+import galleryTwo from "../assets/Gallery2.jpg";
+import galleryThree from "../assets/Gallery3.jpg";
+import techFest from "../assets/Tech-Fest.jpg";
+import culturalFest from "../assets/Cultural-Fest.jpg";
 
 const photos = [
-  { src: "/src/assets/Gallery1.jpg", alt: "gallery1" },
-  { src: "/src/assets/Gallery2.jpg", alt: "gallery2" },
-  { src: "/src/assets/Gallery3.jpg", alt: "gallery3" }
+  { src: galleryOne, alt: "Students at a campus event" },
+  { src: galleryTwo, alt: "College campus activity" },
+  { src: galleryThree, alt: "Students celebrating together" }
 ];
 
 const videos = [
@@ -12,8 +17,8 @@ const videos = [
 ];
 
 const events = [
-  { img: "/src/assets/Tech-Fest.jpg", title: "Tech Fest" },
-  { img: "/src/assets/Cultural-Fest.jpg", title: "Cultural Fest" }
+  { img: techFest, title: "Tech Fest" },
+  { img: culturalFest, title: "Cultural Fest" }
 ];
 
 function Gallery() {

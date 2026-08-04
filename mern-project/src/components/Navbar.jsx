@@ -9,25 +9,25 @@ import "../styles/Navbar.css"
 
 function Navbar() {
   return (
-    <nav class="Navbar">
+    <nav className="Navbar">
       <Link to="/" className="navbar-logo" aria-label="Home">
         <img src={collegeLogo} alt="College logo" />
       </Link>
 
       <div>
-        <Link to="/" class="Link">Home</Link>
-        <Link to="/about" class="Link">About</Link>
-        <Link to="/courses" class="Link">Courses</Link>
-        <Link to="/AdmissonForm" class="Link">Admissions</Link>
-        <Link to="/Notices" class="Link">Notices</Link>
-        <Link to="/Gallery" class="Link">Gallery</Link>
+        <Link to="/" className="Link">Home</Link>
+        <Link to="/about" className="Link">About</Link>
+        <Link to="/courses" className="Link">Courses</Link>
+        <Link to="/AdmissonForm" className="Link">Admissions</Link>
+        <Link to="/Notices" className="Link">Notices</Link>
+        <Link to="/Gallery" className="Link">Gallery</Link>
       </div>
-      <div class="Icons">
-        <a href="https://www.facebook.com/"><img src={facebookIcon} alt="Facebook" /></a>
-        <a href="https://x.com/"><img src={twitterIcon} alt="Twitter"/></a>
-        <a href="https://in.linkedin.com/"><img src={linkedinIcon} alt="Linkedin"/></a>
-        <a href="https://www.instagram.com/?hl=en"><img src={instagramIcon} alt="Instagram"/></a>
-        <a href="https://www.youtube.com/"><img src={youtubeIcon} alt="Youtube"/></a>
+      <div className="Icons">
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><img src={facebookIcon} alt="Facebook" /></a>
+        <a href="https://x.com/" target="_blank" rel="noreferrer"><img src={twitterIcon} alt="X"/></a>
+        <a href="https://in.linkedin.com/" target="_blank" rel="noreferrer"><img src={linkedinIcon} alt="LinkedIn"/></a>
+        <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noreferrer"><img src={instagramIcon} alt="Instagram"/></a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer"><img src={youtubeIcon} alt="YouTube"/></a>
       </div>
      </nav>
   );

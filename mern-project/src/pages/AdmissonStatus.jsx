@@ -15,7 +15,7 @@ function AdmissionStatus({ onRestart }) {
         } else {
           setStatus("Pending");
         }
-      } catch (error) {
+      } catch {
         setStatus("Pending");
       }
     };

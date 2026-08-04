@@ -20,10 +20,10 @@ app.use((req, res, next) => {
 
 const admissionSchema = new mongoose.Schema(
   {
-    name: String,
-    email: String,
-    phone: String,
-    course: String,
+    name: { type: String, required: true, trim: true },
+    email: { type: String, required: true, trim: true, lowercase: true },
+    phone: { type: String, required: true, trim: true },
+    course: { type: String, required: true, trim: true },
     status: { type: String, default: "Pending" }
   },
   { timestamps: true }
@@ -49,9 +49,23 @@ app.get("/health", (req, res) => {
 
 app.post("/api/admissions", async (req, res) => {
   try {
+    const { name, email, phone, course } = req.body;
+    if (![name, email, phone, course].every((value) => typeof value === "string" && value.trim())) {
+      return res.status(400).json({ success: false, message: "Name, email, phone, and course are required." });
+    }
     const admission = new Admission(req.body);
     await admission.save();
     res.status(201).json({ success: true, admission });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+app.get("/api/admissions/latest", async (req, res) => {
+  try {
+    const admission = await Admission.findOne().sort({ createdAt: -1 });
+    if (!admission) return res.status(404).json({ success: false, message: "No admission application found." });
+    res.json({ success: true, admission });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }

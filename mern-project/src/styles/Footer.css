@@ -4,21 +4,25 @@
     color: #fff;
     text-align: center;
 }
-.Box{
+.footer-box{
     display:flex;
     justify-content: space-evenly;
 }
-.Items{
+.footer-items{
     display:flex;
     flex-direction: column;
     align-items: flex-start;
     gap:10px;
 }
-.Items a{
+.footer-items a{
     text-decoration: none;
     color: white;
     font-weight: bolder;
 }
-.contact{
+.footer-contact{
     text-align: left;
+}
+.footer-contact a {
+    color: white;
+    text-decoration: none;
 }
