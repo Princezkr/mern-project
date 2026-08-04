@@ -1,0 +1,23 @@
+.Navbar{
+    padding: 15px 15px 8px 150px;
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    display: flex;
+}
+.Link{
+    margin: 10px;
+    color: #fff; 
+    text-decoration: none;
+    font-weight: bold;
+    padding:15px 20px 15px 20px;
+}
+.Icons {
+    margin-left: auto;
+}
+.Icons a{
+    padding:0px 10px;
+}
+.Icons img{
+    width:25px;
+    height:25px;
+}

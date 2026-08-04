@@ -1,17 +1,28 @@
 import { Link } from "react-router-dom";
+import facebookIcon from "../assets/Facebook.png";
+import twitterIcon from "../assets/Twitter.png";
+import linkedinIcon from "../assets/Linkedin.png";
+import instagramIcon from "../assets/Instagram.png";
+import youtubeIcon from "../assets/Youtube.png";
+import "../styles/Navbar.css"
 
 function Navbar() {
   return (
-    <nav style={{ padding: "15px", background: "#333", color: "#fff" }}>
-      <h2>College</h2>
-      
+    <nav class="Navbar">
       <div>
-        <Link to="/" style={{ margin: "10px", color: "#fff" }}>Home</Link>
-        <Link to="/about" style={{ margin: "10px", color: "#fff" }}>About</Link>
-        <Link to="/courses" style={{ margin: "10px", color: "#fff" }}>Courses</Link>
+        <Link to="/" class="Link">Home</Link>
+        <Link to="/about" class="Link">About</Link>
+        <Link to="/courses" class="Link">Courses</Link>
+      </div>
+      <div class="Icons">
+        <a href="https://www.facebook.com/"><img src={facebookIcon} alt="Facebook" /></a>
+        <a href="https://x.com/"><img src={twitterIcon} alt="Twitter"/></a>
+        <a href="https://in.linkedin.com/"><img src={linkedinIcon} alt="Linkedin"/></a>
+        <a href="https://www.instagram.com/?hl=en"><img src={instagramIcon} alt="Instagram"/></a>
+        <a href="https://www.youtube.com/"><img src={youtubeIcon} alt="Youtube"/></a>
       </div>
     </nav>
   );
 }
-
+//The Links Are just connected to their official pages and not to admin's account 
 export default Navbar;
