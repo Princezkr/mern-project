@@ -1,0 +1,11 @@
+Data Structures: Study Notes
+===========================
+
+Topics
+- Arrays and linked lists
+- Stacks and queues
+- Trees and binary search trees
+- Graph traversal: BFS and DFS
+- Sorting and searching algorithms
+
+Study tip: Practice implementing each structure and analyse its time complexity.

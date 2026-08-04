@@ -4,11 +4,15 @@ import twitterIcon from "../assets/Twitter.png";
 import linkedinIcon from "../assets/Linkedin.png";
 import instagramIcon from "../assets/Instagram.png";
 import youtubeIcon from "../assets/Youtube.png";
+import collegeLogo from "../assets/Logo.jpeg";
 import "../styles/Navbar.css"
 
 function Navbar() {
   return (
     <nav class="Navbar">
+      <Link to="/" className="navbar-logo" aria-label="Home">
+        <img src={collegeLogo} alt="College logo" />
+      </Link>
 
       <div>
         <Link to="/" class="Link">Home</Link>
