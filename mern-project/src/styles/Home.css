@@ -67,7 +67,7 @@
 .about-content p{
     font-size:18px;
     line-height:30px;
-    color:gray;
+    color:black;
     margin-bottom:20px;
 }
 .about-content button{
@@ -159,5 +159,49 @@
 .vision-card p{
     font-size:18px;
     line-height:30px;
-    color:#555;
+    color:black;
+}
+.campus-section{
+    padding:50px 10%;
+    background:#ffffff;
+    text-align:center;
+}
+.campus-section h2{
+    font-size:40px;
+    color:#8b0000;
+    margin-bottom:20px;
+}
+.campus-subtitle{
+    font-size:20px;
+    color:black;
+    margin-bottom:40px;
+}
+.campus-container{
+    display:grid;
+    grid-template-columns:repeat(2,350px);
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+.campus-card{
+    width:250px;
+    background: lightblue;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+.campus-card:hover{
+    box-shadow:0 8px 16px black;
+    transform:translateY(-10px);
+}
+.campus-card h3{
+    color:black;
+    line-height:30px;
+}
+.campus-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
 }

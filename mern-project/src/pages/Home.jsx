@@ -1,22 +1,22 @@
 import"../styles/Home.css";
 import collegeBuilding from "../assets/collegeBuilding.jpg";
 import principal from "../assets/principal.jpg";
+import library from "../assets/library.jpg";
+import lab from "../assets/lab.jpg";
+import sports from "../assets/sports.jpg";
+import hostel from "../assets/hostel.jpg";
 function Home() {
   return (
     <div>
       <section className="hero-section">
         <div className="hero-overlay">
-          <h1>Welcome to ABC College</h1>
+          <h1>Welcome to Odra Institute of Technology</h1>
           <p>Empowering Students, Through Quality Education</p>
           <span>
             Providing modern education system, experienced faculty and a
             better learning experience for students.
           </span>
         </div>
-      </section>
-      <section className="campus-section">
-        <h2>Campus Highlights</h2>
-        <p>Modern labs, library, sports complex, and more.</p>
       </section>
       <section className="about">
         <div className="about-image">
@@ -58,6 +58,34 @@ function Home() {
           </div>
         </div>
       </section>
+      <section className="campus-section">
+        <h2>Campus Highlights</h2>
+        <p className="campus-subtitle">
+           Modern facilities designed to provide the best learning experience.
+        </p>
+        <div className="campus-container">
+          <div className="campus-card">
+            <img src={library} alt="Library" />
+            <h3>Library</h3>
+            <p>Our library is equipped with a vast collection of books, journals, and digital resources to support students' academic needs.</p>
+        </div>
+        <div className="campus-card">
+          <img src={lab} alt="Computer Lab" />
+          <h3>Computer Lab</h3>
+          <p>Modern computer labs with high-speed internet and the latest software.</p>
+        </div>
+       <div className="campus-card">
+         <img src={sports} alt="Sports" />  
+      <h3> Sports</h3>
+      <p>Indoor and outdoor sports facilities for students.</p>
+    </div>
+    <div className="campus-card">
+      <img src={hostel} alt="Hostel" /> 
+      <h3>Hostel Facility</h3>
+      <p>Safe hostel with Wi-Fi, security, and healthy food.</p>
+    </div>
+   </div>
+    </section>
     </div>
     
   );

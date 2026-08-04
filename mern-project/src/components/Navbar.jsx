@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav style={{ padding: "15px", background:"gray", color: "#fff" }}>
-      <h2>College</h2>
+    <nav style={{ padding: "15px", background:"red", color: "#fff" }}>
+      <h2>Odra Institute of Technology</h2>
     
       <div>
         <Link to="/" style={{ margin: "10px", color: "#fff" }}>Home</Link>
