@@ -14,6 +14,7 @@ function Navbar() {
         <Link to="/" class="Link">Home</Link>
         <Link to="/about" class="Link">About</Link>
         <Link to="/courses" class="Link">Courses</Link>
+        <Link to="/AdmissonForm" class="Link">Admissions</Link>
       </div>
       <div class="Icons">
         <a href="https://www.facebook.com/"><img src={facebookIcon} alt="Facebook" /></a>

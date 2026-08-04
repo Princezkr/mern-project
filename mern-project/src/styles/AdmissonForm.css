@@ -1,0 +1,118 @@
+.form-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f4f8ff 0%, #eef4ff 100%);
+}
+
+.admission-flow {
+  width: 100%;
+  max-width: 560px;
+}
+
+.step-indicator {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.step-pill {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: #e9efff;
+  color: #4663c2;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.step-pill.active {
+  background: #4c6ef5;
+  color: white;
+}
+
+.admission-form,
+.step-card {
+  width: 100%;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.admission-form h1,
+.step-card h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1f3b6d;
+}
+
+.step-card p {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.admission-form input,
+.admission-form select,
+.step-card input,
+.admission-form button,
+.secondary-btn {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d7dce5;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.admission-form input:focus,
+.admission-form select:focus,
+.step-card input:focus {
+  outline: none;
+  border-color: #4c6ef5;
+  box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.15);
+}
+
+.admission-form button,
+.secondary-btn {
+  margin-top: 8px;
+  background: #4c6ef5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.admission-form button:hover,
+.secondary-btn:hover {
+  background: #3857c2;
+  transform: translateY(-1px);
+}
+
+.form-message {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.form-message.success {
+  background: #e7f7ed;
+  color: #1b7a3f;
+}
+
+.form-message.error {
+  background: #fde8e8;
+  color: #c53030;
+}

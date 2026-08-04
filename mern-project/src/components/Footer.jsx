@@ -7,7 +7,7 @@ function Footer() {
         <div>
           <h2>OTHER LINKS</h2>
           <div class="Items">
-            <a href="">➤ About ODRA</a>
+            <a href="http://localhost:5173/about">➤ About ODRA</a>
             <a href="">➤ FAQs</a>
             <a href="">➤ Hostel</a>
             <a href="">➤ Cultural Activities</a>
