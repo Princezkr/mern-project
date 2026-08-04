@@ -1,0 +1,45 @@
+.hero-section {
+    height: 500px;
+    background-image: url('../assets/college.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-overlay {
+
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-overlay h1 {
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.hero-overlay h1 {
+    color: pink;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.hero-overlay p {
+    color: #f1c40f;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.hero-overlay span {
+    color: white;
+    font-size: 18px;
+    max-width: 600px;
+    line-height: 1.6;
+}

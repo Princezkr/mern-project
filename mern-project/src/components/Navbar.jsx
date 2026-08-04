@@ -9,6 +9,7 @@ import "../styles/Navbar.css"
 function Navbar() {
   return (
     <nav class="Navbar">
+
       <div>
         <Link to="/" class="Link">Home</Link>
         <Link to="/about" class="Link">About</Link>
@@ -21,7 +22,7 @@ function Navbar() {
         <a href="https://www.instagram.com/?hl=en"><img src={instagramIcon} alt="Instagram"/></a>
         <a href="https://www.youtube.com/"><img src={youtubeIcon} alt="Youtube"/></a>
       </div>
-    </nav>
+     </nav>
   );
 }
 //The Links Are just connected to their official pages and not to admin's account 
