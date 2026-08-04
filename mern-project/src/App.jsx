@@ -5,6 +5,9 @@ import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AdmissionForm from "./pages/AdmissonForm";
+import Notices from "./pages/Notices";
+import Gallery from "./pages/Gallery";
+
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/AdmissonForm" element={<AdmissionForm />} />
+        <Route path="/Notices" element={<Notices/>}/>
+        <Route path="/Gallery" element={<Gallery/>}/>
       </Routes>
 
       <Footer />

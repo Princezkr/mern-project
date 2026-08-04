@@ -1,0 +1,148 @@
+.gallery-page {
+  padding: 32px 24px 48px;
+  background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+  min-height: 100vh;
+}
+
+.gallery-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+  color: #fff;
+  padding: 28px 32px;
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.2);
+  margin-bottom: 24px;
+}
+
+.gallery-hero h1 {
+  font-size: 2rem;
+  margin: 6px 0 10px;
+}
+
+.gallery-hero p {
+  margin: 0;
+  color: #dbeafe;
+  max-width: 620px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #bfdbfe;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-badges span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+  font-weight: 600;
+}
+
+.gallery-section {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin: 0 0 4px;
+  color: #1f2937;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.photo-grid,
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.photo-card,
+.event-card {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  border: 1px solid #f1f5f9;
+}
+
+.photo-card img,
+.event-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover img,
+.event-card:hover img {
+  transform: scale(1.04);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.event-card p {
+  margin: 0;
+  padding: 12px 14px 14px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+@media (max-width: 768px) {
+  .gallery-page {
+    padding: 20px 14px 40px;
+  }
+
+  .gallery-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .gallery-section {
+    padding: 18px;
+  }
+}
