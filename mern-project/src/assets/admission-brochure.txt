@@ -1,0 +1,20 @@
+Admission Brochure
+===================
+
+Welcome to our institution.
+
+Programs offered:
+- Computer Science
+- Business Administration
+- Electronics and Communication
+
+Admission requirements:
+- Completed application form
+- Academic transcripts
+- Identity proof
+- Passport-size photograph
+
+Contact office:
+Admissions Office
+Phone: +91 98765 43210
+Email: admissions@college.edu

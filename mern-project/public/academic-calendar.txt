@@ -1,0 +1,13 @@
+Academic Calendar
+=================
+
+Semester 1:
+- Registration: August 15
+- Classes begin: August 20
+- Mid-term exams: October 10 to 15
+- Semester break: December 20 to January 5
+
+Semester 2:
+- Registration: January 8
+- Classes begin: January 10
+- Final exams: May 20 to 30

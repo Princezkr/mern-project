@@ -1,0 +1,48 @@
+.Navbar{
+    padding: 8px 15px;
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.navbar-logo {
+    display: flex;
+    margin-right: 14px;
+}
+.navbar-logo img {
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.Navbar1{
+    padding: 20px 15px 20px 150px;
+    background: linear-gradient(90deg, #8e0e00 0%, #cb2d3e 100%);   
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.Link1{
+    margin: 20px;
+    color: #fff; 
+    text-decoration: none;
+    font-weight: bold;
+    padding:auto;
+}
+.Link{
+    margin: 10px;
+    color: #fff; 
+    text-decoration: none;
+    font-weight: bold;
+    padding:15px 20px 15px 20px;
+}
+.Icons {
+    margin-left: auto;
+}
+.Icons a{
+    padding:0px 10px;
+}
+.Icons img{
+    width:25px;
+    height:25px;
+}

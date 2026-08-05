@@ -1,0 +1,9 @@
+Previous Year Papers
+====================
+
+Available papers
+- Data Structures: Semester 4
+- Database Management Systems: Semester 4
+- Computer Networks: Semester 5
+
+Use these papers to identify recurring question patterns and prepare revision plans.
