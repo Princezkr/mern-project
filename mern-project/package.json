@@ -5,14 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "server": "node server.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "json-web-token": "^2.0.0",
+    "jsonwebtoken": "^9.0.0",
     "mongodb-memory-server": "^11.2.0",
     "mongoose": "^9.9.1",
     "react": "^19.2.8",

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import UploadDocs from "./DocumentUpload";
 import AdmissionStatus from "./AdmissonStatus";
+import { API_BASE_URL } from "../utils/api";
 import "../styles/AdmissonForm.css";
 
 function AdmissionForm() {
@@ -34,7 +35,7 @@ function AdmissionForm() {
     setIsError(false);
 
     try {
-      const response = await fetch("http://localhost:5000/api/admissions", {
+      const response = await fetch(`${API_BASE_URL}/admissions`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, phone, course })

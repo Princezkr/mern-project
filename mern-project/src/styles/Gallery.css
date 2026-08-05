@@ -79,12 +79,14 @@
 .photo-grid,
 .event-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: stretch;
 }
 
 .photo-card,
 .event-card {
+  margin: 0;
   overflow: hidden;
   border-radius: 16px;
   background: #fff;
@@ -95,7 +97,7 @@
 .photo-card img,
 .event-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: clamp(220px, 24vw, 320px);
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
@@ -104,6 +106,16 @@
 .photo-card:hover img,
 .event-card:hover img {
   transform: scale(1.04);
+}
+
+.photo-card figcaption {
+  color: #1f2937;
+  font-weight: 600;
+  padding: 12px 14px;
+}
+
+.photo-card:has(figcaption) img {
+  height: clamp(200px, 20vw, 280px);
 }
 
 .video-grid {
@@ -144,5 +156,16 @@
 
   .gallery-section {
     padding: 18px;
+  }
+
+  .photo-grid,
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card img,
+  .event-card img,
+  .photo-card:has(figcaption) img {
+    height: 240px;
   }
 }

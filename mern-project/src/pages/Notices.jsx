@@ -1,124 +1,18 @@
+import { useEffect, useState } from "react";
+import { API_BASE_URL } from "../utils/api";
 import "../styles/Notices.css";
 
 const data = {
-  stats: [
-    { label: "New Notices", value: "6" },
-    { label: "Upcoming Events", value: "4" },
-    { label: "PDF Resources", value: "3" }
-  ],
-  notices: [
-    { title: "Admission Deadline Extended", date: "2026-08-10", tag: "NEW" },
-    { title: "Exam Schedule Released", date: "2026-08-05", tag: "IMPORTANT" },
-    { title: "Library Access Updated", date: "2026-07-30" }
-  ],
-  events: [
-    { title: "Tech Fest 2026", date: "2026-09-15", time: "10:00 AM" },
-    { title: "Hackathon", date: "2026-10-01", time: "9:30 AM" },
-    { title: "Career Guidance Seminar", date: "2026-10-12", time: "11:00 AM" }
-  ],
-  circulars: [
-    { title: "Attendance Policy Update", date: "2026-07-20", detail: "Updated attendance guidelines for all semesters." },
-    { title: "Campus Safety Notice", date: "2026-07-25", detail: "Emergency contact and visitor entry procedures." }
-  ],
-  pdfs: [
-    { title: "Admission Brochure", link: "/admission-brochure.txt" },
-    { title: "Academic Calendar", link: "/academic-calendar.txt" },
-    { title: "Student Handbook", link: "/student-handbook.txt" }
-  ]
+  stats: [{ label: "New Notices", value: "6" }, { label: "Upcoming Events", value: "4" }, { label: "PDF Resources", value: "3" }],
+  notices: [{ title: "Admission Deadline Extended", date: "2026-08-10", tag: "NEW" }, { title: "Exam Schedule Released", date: "2026-08-05", tag: "IMPORTANT" }, { title: "Library Access Updated", date: "2026-07-30" }],
+  events: [{ title: "Tech Fest 2026", date: "2026-09-15", time: "10:00 AM" }, { title: "Hackathon", date: "2026-10-01", time: "9:30 AM" }, { title: "Career Guidance Seminar", date: "2026-10-12", time: "11:00 AM" }],
+  circulars: [{ title: "Attendance Policy Update", date: "2026-07-20", detail: "Updated attendance guidelines for all semesters." }, { title: "Campus Safety Notice", date: "2026-07-25", detail: "Emergency contact and visitor entry procedures." }],
+  pdfs: [{ title: "Admission Brochure", link: "/admission-brochure.txt" }, { title: "Academic Calendar", link: "/academic-calendar.txt" }, { title: "Student Handbook", link: "/student-handbook.txt" }],
 };
 
 function Notices() {
-  return (
-    <div className="notices-container">
-      <section className="hero-panel">
-        <div>
-          <p className="eyebrow">Campus Updates</p>
-          <h1>Stay informed with the latest notices, events, and student resources.</h1>
-          <p className="hero-text">
-            Discover important announcements, academic updates, and useful downloads in one friendly place.
-          </p>
-          <div className="hero-actions">
-            <a href="#latest-notices" className="primary-btn">View Latest Updates</a>
-            <a href="#downloads" className="secondary-btn">Download Resources</a>
-          </div>
-        </div>
-
-        <div className="hero-summary">
-          {data.stats.map((item, index) => (
-            <div key={index} className="summary-card">
-              <strong>{item.value}</strong>
-              <span>{item.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div className="notices-grid">
-        <div className="notice-box" id="latest-notices">
-          <div className="box-heading">
-            <h2>Latest Notices</h2>
-            <span className="mini-badge">Fresh</span>
-          </div>
-          {data.notices.map((item, i) => (
-            <div key={i} className="notice-item">
-              <div>
-                <h4>{item.title}</h4>
-                <p>{item.date}</p>
-              </div>
-              {item.tag && <span className="tag">{item.tag}</span>}
-            </div>
-          ))}
-        </div>
-
-        <div className="notice-box">
-          <div className="box-heading">
-            <h2>Upcoming Events</h2>
-            <span className="mini-badge alt">Calendar</span>
-          </div>
-          {data.events.map((item, i) => (
-            <div key={i} className="notice-item event-item">
-              <div>
-                <h4>{item.title}</h4>
-                <p>{item.date}</p>
-              </div>
-              <span className="event-time">{item.time}</span>
-            </div>
-          ))}
-        </div>
-
-        <div className="notice-box">
-          <div className="box-heading">
-            <h2>Circulars</h2>
-            <span className="mini-badge alt">Official</span>
-          </div>
-          {data.circulars.map((item, i) => (
-            <div key={i} className="notice-item circular-item">
-              <div>
-                <h4>{item.title}</h4>
-                <p>{item.detail}</p>
-              </div>
-              <span className="date-pill">{item.date}</span>
-            </div>
-          ))}
-        </div>
-
-        <div className="notice-box" id="downloads">
-          <div className="box-heading">
-            <h2>Download PDFs</h2>
-            <span className="mini-badge alt">Resources</span>
-          </div>
-          {data.pdfs.map((item, i) => (
-            <div key={i} className="notice-item pdf-item">
-              <h4>{item.title}</h4>
-              <a href={item.link} className="btn" download>
-                Download
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+  const [adminNotices, setAdminNotices] = useState([]);
+  useEffect(() => { fetch(`${API_BASE_URL}/notices`).then((response) => response.ok ? response.json() : []).then((items) => setAdminNotices(Array.isArray(items) ? items : [])).catch(() => {}); }, []);
+  return <div className="notices-container"><section className="hero-panel"><div><p className="eyebrow">Campus Updates</p><h1>Stay informed with the latest notices, events, and student resources.</h1><p className="hero-text">Discover important announcements, academic updates, and useful downloads in one friendly place.</p><div className="hero-actions"><a href="#latest-notices" className="primary-btn">View Latest Updates</a><a href="#downloads" className="secondary-btn">Download Resources</a></div></div><div className="hero-summary">{data.stats.map((item) => <div key={item.label} className="summary-card"><strong>{item.value}</strong><span>{item.label}</span></div>)}</div></section><div className="notices-grid"><section className="notice-box" id="latest-notices"><div className="box-heading"><h2>Latest Notices</h2><span className="mini-badge">Fresh</span></div>{adminNotices.map((item) => <article key={item._id} className="notice-item"><div><h4>{item.title}</h4><p>{item.content}</p><p>{item.date}</p></div>{item.tag && <span className="tag">{item.tag}</span>}</article>)}{data.notices.map((item) => <div key={item.title} className="notice-item"><div><h4>{item.title}</h4><p>{item.date}</p></div>{item.tag && <span className="tag">{item.tag}</span>}</div>)}</section><section className="notice-box"><div className="box-heading"><h2>Upcoming Events</h2><span className="mini-badge alt">Calendar</span></div>{data.events.map((item) => <div key={item.title} className="notice-item event-item"><div><h4>{item.title}</h4><p>{item.date}</p></div><span className="event-time">{item.time}</span></div>)}</section><section className="notice-box"><div className="box-heading"><h2>Circulars</h2><span className="mini-badge alt">Official</span></div>{data.circulars.map((item) => <div key={item.title} className="notice-item circular-item"><div><h4>{item.title}</h4><p>{item.detail}</p></div><span className="date-pill">{item.date}</span></div>)}</section><section className="notice-box" id="downloads"><div className="box-heading"><h2>Download PDFs</h2><span className="mini-badge alt">Resources</span></div>{data.pdfs.map((item) => <div key={item.title} className="notice-item pdf-item"><h4>{item.title}</h4><a href={item.link} className="btn" download>Download</a></div>)}</section></div></div>;
 }
-
 export default Notices;
