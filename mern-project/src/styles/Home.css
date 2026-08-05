@@ -43,3 +43,165 @@
     max-width: 600px;
     line-height: 1.6;
 }
+.about{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 10%;
+    gap:50px;
+}
+.about-image{
+    width:100%;
+}
+.about-image img{
+    width:100%;
+    border-radius:10px;
+}
+.about-content{
+    width:50%;
+}
+.about-content h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+.about-content p{
+    font-size:18px;
+    line-height:30px;
+    color:black;
+    margin-bottom:20px;
+}
+.about-content button{
+    padding:12px 30px;
+    background:#8b0000;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+.about-content button:hover{
+    background:blue;
+}
+.principal{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 10%;
+    gap:50px;
+    background:white;
+}
+.principal-image{
+    width:50%;
+}
+.principal-image img{
+    width:100%;
+    border-radius:10px;
+}
+.principal-content{
+    width:50%;
+}
+.principal-content h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+.principal-content h3{
+    font-size:25px;
+    margin-bottom:15px;
+    color:#8b0000
+}
+.principal-content p{
+    font-size:24px;
+    margin-bottom:25px;
+    color:#8b0000;
+}
+.principal-button{
+    background:#8b0000;
+    color:white;
+    padding:12px 30px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+.principal-button:hover{
+    background:blue;
+}
+.vision-mission{
+    padding:50px 10%;
+    background:#f8f9fa;
+}
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#8b0000;
+}
+.vision-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:stretch;
+    gap:30px;
+}
+.vision-card{
+    width:45%;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.vision-card:hover{
+    transform:translateY(-10px);
+}
+.vision-card h3{
+    font-size:28px;
+    color:#8b0000;
+    margin-bottom:20px;
+}
+.vision-card p{
+    font-size:18px;
+    line-height:30px;
+    color:black;
+}
+.campus-section{
+    padding:50px 10%;
+    background:#ffffff;
+    text-align:center;
+}
+.campus-section h2{
+    font-size:40px;
+    color:#8b0000;
+    margin-bottom:20px;
+}
+.campus-subtitle{
+    font-size:20px;
+    color:black;
+    margin-bottom:40px;
+}
+.campus-container{
+    display:grid;
+    grid-template-columns:repeat(2,350px);
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+.campus-card{
+    width:250px;
+    background: lightblue;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+.campus-card:hover{
+    box-shadow:0 8px 16px black;
+    transform:translateY(-10px);
+}
+.campus-card h3{
+    color:black;
+    line-height:30px;
+}
+.campus-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
